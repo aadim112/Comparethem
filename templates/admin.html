@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Content</title>
+    <style>
+        .box{
+            width: 350px;
+            height: 200px;
+            margin-top: 200px;
+            border-width: 2px;
+            border-color: black;
+            border-style: dashed;
+            border-radius: 10px;
+        }
+        .form{
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <center><p>IMPORTANT</p></center>
+    <center><p>This login is only allowed for admins only.</p></center>
+    <center>
+    <div class="box">
+        <center><p> ADMIN LOGIN</p></center>
+        <form method="POST" action="/admin" enctype="multipart/form-data" class="form">
+            <input type="text" placeholder="Enter Username" name="username" style="width: 250px;">
+            <br><br>
+            <input type="text" placeholder="Enter Password" name="password" style="width: 250px;">
+            <br><br>
+            <button type="submit">Verify Admin</button>
+        </form>
+    </div>   
+    </center> 
+</body>
+</html>

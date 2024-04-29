@@ -1,0 +1,140 @@
+<html>
+    <head>
+        <title>Rate or create</title>
+    </head>
+    <!--------------------------FONTS-------------------->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Inter:wght@100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Climate+Crisis&family=Inter:wght@100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <style>
+        .container{
+            width: 100%;
+            height: 300px;
+            display: flex;
+            margin-top: 100px;
+        }
+        .rate{
+            width: 400px;
+            height: 200px;
+            background-color:black;
+            color: white;
+            border-radius: 20px;
+            margin-left: 200px;
+            cursor: pointer;
+            font-family: Anton;
+            font-size: 30px;
+        }
+        .rate:hover{
+            background-color: white;
+            color: black;
+        }
+        .create {
+            width: 400px;
+            height: 200px;
+            border: none;
+            outline: none;
+            color: #fff;
+            background: #111;
+            cursor: pointer;
+            position: relative;
+            z-index: 0;
+            border-radius: 10px;
+            margin-left: 200px;
+            font-family: Anton;
+            font-size: 30px;
+            margin-left: 250px;
+        }
+        
+        .create:before {
+            content: '';
+            background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+            position: absolute;
+            top: -2px;
+            left:-2px;
+            background-size: 400%;
+            z-index: -1;
+            filter: blur(5px);
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
+            animation: glowing 20s linear infinite;
+            opacity: 0;
+            transition: opacity .3s ease-in-out;
+            border-radius: 10px;
+        }
+        
+        .create:active {
+            color: #000
+        }
+        
+        .create:active:after {
+            background: transparent;
+        }
+        
+        .create:hover:before {
+            opacity: 1;
+        }
+        
+        .create:after {
+            z-index: -1;
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #111;
+            left: 0;
+            top: 0;
+            border-radius: 10px;
+        }
+        
+        @keyframes glowing {
+            0% { background-position: 0 0; }
+            50% { background-position: 400% 0; }
+            100% { background-position: 0 0; }
+        }
+        .policies{
+            width: auto;
+            height: auto;
+            border-radius: 5px;
+            border-style: dashed;
+        }
+        .adminform{
+            width: 80%;
+            height: 500px;
+            background-color: black;
+            margin-left: 10%;
+            visibility: hidden;
+        }
+    </style>
+    <body style="opacity: 100%;">
+        <center><h2 style="font-family: Anton;font-size:50px;margin-top:20px">Well Come Buddy!!</h2></center>
+        <br>
+        <center>
+        <div class="container">
+                <a href="/create"><button class="create">Create</button></a>
+                <a href="/rate " ><button class="rate">Rate</button></a>
+        </div>
+        </center>
+
+        <center>
+            <div class="policies">
+                <input type="radio" id="policy" checked>
+                <label style="font-family: Roboto Mono;">I accepts all the terms and conditions of the website and will be responsibe for any issue/problem created by me due to the website</label>
+            </div>
+        </center>
+        <br>
+        <center>
+            <h2 style="font-family: Inter;font-size:20px">This is a website build for enterntainment pusrpose only.This site does not take any responsibility of misbehaviour occureed due to website.</h2>
+            <h2 style="font-family: Inter;font-size:20px">This website is also made for testing and enhancing the webdevlopment skills. </h2>
+        </center>
+        <div>
+            <a href="/admin"><button>Admin</button></a>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,112 @@
+<Html>
+    <head>
+        <title>Uploading the looks</title>
+    </head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        .container{
+            width: 80%;
+            height: 650px;
+            background-color: black;
+            margin-left: 10%;
+            margin-top: 15px;
+            display: flex;
+        }
+        .div1{
+            width: 400px;
+            height: 500px;
+            background-color: white;
+            margin-top: 30px;
+            margin-left: 60px;
+            border-radius: 20px;
+            padding: 20px;
+        }
+        .div2{
+            width: 400px;
+            height: 500px;
+            background-color: white;
+            margin-top: 30px;
+            margin-left: 210px;
+            border-radius: 20px;
+            padding: 20px;
+        }
+        .input{
+            width: 380;
+            height: 50px;
+            border-radius: 10px;
+            border-style: dashed;
+            border-color: black;
+            margin-top: 20px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            text-align: center;
+            font-family: Inter, sans-serif;
+            color: grey;
+            border-color: grey;
+        }
+        .upload{
+            width: 120px;
+            height: 50px;
+            background-color: darkslateblue;
+            margin-top: 15px;
+            border-radius: 10px;
+            border-width: 0px;
+            color: white;
+        }
+    </style>
+    <body>
+        <form action="#" method="POST" enctype="multipart/form-data">
+        <div class="container">
+            <div class="div1">
+                <img src="images/profile.png" style="width: 400px;height:400px;border-top-right-radius:20px;border-top-left-radius:20px;object-fit:contain" id="img1" name="m1">
+                <!--This is the place to insert the fist comparision image-->
+                    <center>
+                        <div class="input">
+                            <label for="label-for-1" id="label-file-1" class="label-for" onclick="insertimage1()">Insert the file
+                                <input type="file" accept="image/*" id="label-for-1" style="visibility:hidden", name="image1" onchange="change1()">
+                            </label>
+                        </div>
+                        <br>
+                    </center>
+                <!----This is the end of first form-->
+            </div>
+
+
+            <div class="div2">
+                <img src="" style="width: 400px;height:400px;border-top-right-radius:20px;border-top-left-radius:20px;object-fit:contain" id="img2">
+                <!--This is the place to insert the secound comparision image-->
+                    <center>
+                        <div class="input">
+                            <label for="label-for-2" id="label-file-2" class="label-for" onclick="insertimage2()">Insert the file
+                                <input type="file" accept="image/*" id="label-for-2" style="visibility:hidden" name="image2" name="m2" onchange="change2()">
+                            </label>
+                        </div>
+                        <br>
+                    </center>
+                <!----This is the end of secound form-->
+            </div>
+        </div>
+        <center><button type="submit" class="upload">Upload</button></center>
+        </form> 
+    </body>
+    <script>
+
+        let imgfirst = document.getElementById("img1");
+        let inputfirst = document.getElementById("label-for-1");
+
+        function change1(){
+            imgfirst.src = URL.createObjectURL(inputfirst.files[0]);
+        }
+
+        let imgsecound = document.getElementById("img2");
+        let inputsecound = document.getElementById("label-for-2");
+
+        function change2(){
+            imgsecound.src = URL.createObjectURL(inputsecound.files[0]);
+        }
+        
+    </script>
+</Html>
